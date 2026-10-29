@@ -11,9 +11,12 @@ while valor_compra != 0:
 
     idade = int(input("Digite a idade do cliente: "))
 
-    while idade < 0:
-        print("Idade inválida! Digite uma idade válida.")
-        idade = int(input("Digite a idade do cliente: "))
+    while True:
+        if idade < 0:
+            print("Idade inválida! Digite uma idade válida.")
+            idade = int(input("Digite a idade do cliente: "))
+            continue
+        break
 
     valor_original = valor_compra
 
